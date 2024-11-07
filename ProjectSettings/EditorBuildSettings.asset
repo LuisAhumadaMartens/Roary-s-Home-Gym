@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Horizontal.unity
+    path: Assets/Scenes/Windmill.unity
     guid: eae44e0390524de47a857e90e746dd0d
   - enabled: 0
     path: Assets/Scenes/OLD - Deprecated.unity
