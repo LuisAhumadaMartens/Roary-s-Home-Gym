@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 149624886}
   - component: {fileID: 149624887}
   m_Layer: 5
-  m_Name: Buttons (1)
+  m_Name: Second Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 246162414}
   - component: {fileID: 246162413}
   m_Layer: 5
-  m_Name: Icon Button (5)
+  m_Name: Exercise 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 289541787}
   - component: {fileID: 289541786}
   m_Layer: 5
-  m_Name: Icon Button (4)
+  m_Name: Exercise 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 434651762}
   - component: {fileID: 434651761}
   m_Layer: 5
-  m_Name: Icon Button (4)
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 531317904}
   - component: {fileID: 531317903}
   m_Layer: 5
-  m_Name: Icon Button (4)
+  m_Name: Exercise 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 647637116}
   - component: {fileID: 647637115}
   m_Layer: 5
-  m_Name: Icon Button (5)
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1584,7 +1584,7 @@ GameObject:
   - component: {fileID: 655711301}
   - component: {fileID: 655711300}
   m_Layer: 5
-  m_Name: Icon Button (5)
+  m_Name: Exercise 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1767,7 +1767,7 @@ GameObject:
   - component: {fileID: 939423554}
   - component: {fileID: 939423553}
   m_Layer: 5
-  m_Name: Icon Button (4)
+  m_Name: Exercise 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2115,7 +2115,7 @@ GameObject:
   - component: {fileID: 1188901255}
   - component: {fileID: 1188901254}
   m_Layer: 5
-  m_Name: Icon Button (4)
+  m_Name: Exercise 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2970,7 +2970,7 @@ GameObject:
   - component: {fileID: 2016539487}
   - component: {fileID: 2016539488}
   m_Layer: 5
-  m_Name: Buttons (3)
+  m_Name: Third Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3443,7 +3443,7 @@ GameObject:
   - component: {fileID: 1477547283149316045}
   - component: {fileID: 52416911953179267}
   m_Layer: 5
-  m_Name: Buttons
+  m_Name: First Row
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
