@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vertical.unity
     guid: f181af19177fb4bf6b67e7981e994637
+  - enabled: 1
+    path: Assets/Scenes/Meta SDK DEMO.unity
+    guid: 57cc30293ea4e7c4a91713a9893fc5ec
+  - enabled: 1
+    path: Assets/Samples/XR Interaction Toolkit/2.6.3/Hands Interaction Demo/HandsDemoScene.unity
+    guid: 3ff35cecbcc52cc42945cf531638a60a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e364baf88b165a2479bc7d981e840bcc,
       type: 2}
