@@ -3,38 +3,63 @@ using UnityEngine;
 
 public class BridgeSwing : MonoBehaviour
 {
-    [SerializeField] private float swingSpeed = 1f; 
-    [SerializeField] private float maxAngle = 45f;
-    [SerializeField] private AnimationCurve swingCurve; 
-    [SerializeField] private bool isSwinging = true; 
+    [Header("Swing Settings")]
+    public float maxAngle = 65f; 
+    public float minSpeed = 0.1f; 
+    public float maxSpeed = 500f; 
+    public float swingPeriod = 5f; 
 
-    private float swingTime = 0f; // Variable to track the swing progression
+    //[Header("Control Settings")]
+    //[SerializeField]
+    private bool isMoving = false; // If the Scene starts with this in a false, ONLY change it with the function SetMovement(true);
 
-    void Update()
+    private float currentAngle;
+    private float elapsedTime;
+
+    void Start()
     {
-        if (isSwinging)
+        currentAngle = maxAngle;
+        ApplyRotation();
+
+        if (isMoving)
         {
-            SwingBridge();
+            elapsedTime = Mathf.Asin(currentAngle / maxAngle) / (Mathf.PI * 2) * swingPeriod;
         }
     }
 
-    void SwingBridge()
+    void Update()
     {
-        swingTime += Time.deltaTime * swingSpeed;
-        float time = Mathf.PingPong(swingTime, 1f);
-        float curveValue = swingCurve.Evaluate(time); 
-        float angle = Mathf.Lerp(-maxAngle, maxAngle, curveValue); 
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        if (!isMoving)
+            return; 
+
+        elapsedTime += Time.deltaTime;
+
+        float normalizedTime = (elapsedTime % swingPeriod) / swingPeriod;
+
+        float sineValue = Mathf.Sin(normalizedTime * Mathf.PI * 2);
+
+        float speedModifier = Mathf.Abs(sineValue);
+        float currentSpeed = Mathf.Lerp(minSpeed, maxSpeed, speedModifier);
+
+        currentAngle = maxAngle * sineValue;
+
+        ApplyRotation();
     }
 
-    public void StartSwinging()
+    private void ApplyRotation()
     {
-        isSwinging = true;
+        transform.localRotation = Quaternion.Euler(0, 0, currentAngle);
     }
 
-    public void StopSwinging()
+    public void SetMovement(bool move)
     {
-        isSwinging = false;
+        isMoving = move;
+
+        if (move)
+        {
+            elapsedTime = Mathf.Asin(maxAngle / maxAngle) / (Mathf.PI * 2) * swingPeriod;
+            currentAngle = maxAngle; 
+            ApplyRotation();
+        }
     }
 }
-
