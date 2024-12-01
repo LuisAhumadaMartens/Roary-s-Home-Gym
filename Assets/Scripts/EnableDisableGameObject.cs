@@ -76,4 +76,3 @@ public class EnableDisableGameObject : MonoBehaviour
         obj.SetActive(false);
     }
 }
-

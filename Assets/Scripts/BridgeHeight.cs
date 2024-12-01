@@ -3,23 +3,21 @@ using UnityEngine;
 
 public class BridgeHeight : MonoBehaviour
 {
-    [SerializeField] private GameObject bridge; // GameObject to move
-    [SerializeField] private GameObject bridgeOffset; // Object for getting the Z location offset
-    [SerializeField] private float percentage = 0.3f; // Percentage of the player height to apply (e.g., 0.3 for 30%)
-    [SerializeField] private float offset = 0f; // Additional offset (default 0)
+    [SerializeField] private GameObject bridge;
+    [SerializeField] private GameObject bridgeOffset; 
+    [SerializeField] private float percentage = 0.3f;
+    [SerializeField] private float playerOffset = 12.5f;
+    [SerializeField] private float offset = 1.1f;
 
-    private const string PlayerHeightKey = "PlayerHeight"; // PlayerPrefs key for height
-    private float playerHeight; // Player height from PlayerPrefs
+    private const string PlayerHeightKey = "PlayerHeight"; 
+    private float playerHeight; 
 
     void Start()
     {
-        // Get player height from PlayerPrefs
-        playerHeight = PlayerPrefs.GetFloat(PlayerHeightKey, 1f); // Default to 1 if not found
+        playerHeight = PlayerPrefs.GetFloat(PlayerHeightKey, 1f);
 
-        // Calculate the Y position for the bridge
-        float calculatedY = (playerHeight * percentage) + Mathf.Abs(bridgeOffset.transform.position.z) + offset;
+        float calculatedY = ((playerHeight + (playerOffset / 100)) * percentage) + Mathf.Abs(bridgeOffset.transform.position.z) + offset;
 
-        // Apply the calculated Y position to the bridge's position
         if (bridge != null)
         {
             Vector3 bridgePosition = bridge.transform.position;
