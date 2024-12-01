@@ -6,16 +6,17 @@ using System.Collections;
 public class SceneChoose : MonoBehaviour
 {
     [SerializeField]
-    private int sceneNumber; 
-
-    [SerializeField]
     private Image fadeImage; 
 
     [SerializeField]
     private bool enableFade = true;
 
-    public void ChangeScene()
+    private int sceneNumber; 
+
+    public void ChangeScene(int sceneNumber)
     {
+        this.sceneNumber = sceneNumber;
+
         if (enableFade && fadeImage != null)
         {
             StartCoroutine(FadeOutAndLoadScene());

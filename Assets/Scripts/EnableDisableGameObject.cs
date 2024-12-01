@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnableDisableGameObject : MonoBehaviour
 {
-    public float fadeDuration = 1f;
+    public float fadeDuration = 0.25f;
 
     public void EnableObject(GameObject obj)
     {

@@ -33,7 +33,7 @@ public class ObjectCoveringBridge : MonoBehaviour
     
     [Header("Public Values")]
     public float totalCount = 20f; 
-    private float currentCount = 0f;
+    public float currentCount = 0f;
 
     private float lastZRotation = 0f; 
 

@@ -5,27 +5,27 @@ using System.Collections;
 public class WarningBoundary : MonoBehaviour
 {
     [SerializeField]
-    private GameObject playerObject; // The GameObject to detect (with SphereCollider).
+    private GameObject playerObject; 
 
     [SerializeField]
-    private Image warningBackground; // The warning background image.
+    private Image warningBackground;
 
     [SerializeField]
-    private Image warningText; // The warning text image.
+    private Image warningText;
 
     [SerializeField]
-    private float fadeDuration = 1f; // Duration of the fade animation.
+    private float fadeDuration = 0.25f;
 
-    private BoxCollider boundaryCollider; // BoxCollider reference.
-    private SphereCollider playerCollider; // SphereCollider reference on the player.
-
-    private bool isPlayerOutside; // Track if the player is currently outside.
+    private BoxCollider boundaryCollider;
+    private SphereCollider playerCollider;
+    
+    [Header("Output Values - DO NOT CHANGE")]
+    public bool isPlayerOutside;
     private Coroutine backgroundFadeCoroutine;
     private Coroutine textFadeCoroutine;
 
     private void Start()
     {
-        // Ensure both images are disabled at the start.
         warningBackground?.gameObject.SetActive(false);
         warningText?.gameObject.SetActive(false);
 
@@ -38,11 +38,9 @@ public class WarningBoundary : MonoBehaviour
         if (boundaryCollider == null || playerObject == null || playerCollider == null)
             return;
 
-        // Calculate the effective position of the player's sphere collider.
         Vector3 playerPosition = playerObject.transform.position;
         float playerRadius = playerCollider.radius * playerObject.transform.lossyScale.x;
 
-        // Check if the player's sphere is outside the box bounds.
         bool currentlyOutside = !IsSphereInsideBox(playerPosition, playerRadius);
 
         if (currentlyOutside != isPlayerOutside)
@@ -56,7 +54,6 @@ public class WarningBoundary : MonoBehaviour
     {
         Bounds boxBounds = boundaryCollider.bounds;
 
-        // Check if the sphere's bounds overlap the box bounds.
         return sphereCenter.x + sphereRadius > boxBounds.min.x &&
                sphereCenter.x - sphereRadius < boxBounds.max.x &&
                sphereCenter.y + sphereRadius > boxBounds.min.y &&
@@ -69,13 +66,11 @@ public class WarningBoundary : MonoBehaviour
     {
         if (outside)
         {
-            // Fade in both images when the player is outside the box.
             StartFade(warningBackground, true);
             StartFade(warningText, true);
         }
         else
         {
-            // Fade out both images when the player is inside the box.
             StartFade(warningBackground, false);
             StartFade(warningText, false);
         }
@@ -87,7 +82,7 @@ public class WarningBoundary : MonoBehaviour
 
         if (fadeIn)
         {
-            image.gameObject.SetActive(true); // Enable the image before fading in.
+            image.gameObject.SetActive(true); 
         }
 
         if (image == warningBackground && backgroundFadeCoroutine != null)
@@ -122,6 +117,6 @@ public class WarningBoundary : MonoBehaviour
         image.color = imageColor;
 
         if (!fadeIn)
-            image.gameObject.SetActive(false); // Disable the image after fading out.
+            image.gameObject.SetActive(false);
     }
 }

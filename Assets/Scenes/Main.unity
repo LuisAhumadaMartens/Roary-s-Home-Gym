@@ -867,7 +867,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcbe48e51cfb4c4b99547030597f735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 0
   fadeImage: {fileID: 0}
   enableFade: 1
 --- !u!1 &289541784
@@ -2224,14 +2223,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 729926421}
+      - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2957,66 +2956,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655711298}
   m_CullTransparentMesh: 0
---- !u!114 &729926419 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7037232491675809858, guid: 3c0ddeb7383b447abb22eef584fe7201,
-    type: 3}
-  m_PrefabInstance: {fileID: 5341962971266370766}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fcbe48e51cfb4c4b99547030597f735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &729926420 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6152206886255399904, guid: 3c0ddeb7383b447abb22eef584fe7201,
-    type: 3}
-  m_PrefabInstance: {fileID: 5341962971266370766}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fcbe48e51cfb4c4b99547030597f735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &729926421 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3445034826501759388, guid: 3c0ddeb7383b447abb22eef584fe7201,
-    type: 3}
-  m_PrefabInstance: {fileID: 5341962971266370766}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fcbe48e51cfb4c4b99547030597f735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &729926422 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4413260446122201655, guid: 3c0ddeb7383b447abb22eef584fe7201,
-    type: 3}
-  m_PrefabInstance: {fileID: 5341962971266370766}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fcbe48e51cfb4c4b99547030597f735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &729926423 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1512759196754958489, guid: 3c0ddeb7383b447abb22eef584fe7201,
-    type: 3}
-  m_PrefabInstance: {fileID: 5341962971266370766}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fcbe48e51cfb4c4b99547030597f735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &729926424 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6229138155520108168, guid: 3c0ddeb7383b447abb22eef584fe7201,
@@ -3327,14 +3266,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 729926423}
+      - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4746,11 +4685,11 @@ MonoBehaviour:
       - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5096,14 +5035,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 729926420}
+      - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6753,14 +6692,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 729926419}
+      - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6785,7 +6724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcbe48e51cfb4c4b99547030597f735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 4
   fadeImage: {fileID: 0}
   enableFade: 1
 --- !u!1 &1870948600
@@ -7101,14 +7039,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 729926422}
+      - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
