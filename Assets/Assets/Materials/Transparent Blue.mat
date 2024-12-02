@@ -12,11 +12,13 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ENVIRONMENTREFLECTIONS_OFF
+  - _GLOSSYREFLECTIONS_OFF
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
@@ -93,13 +95,13 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _Cull: 2
+    - _Cull: 0
     - _Cutoff: 0.1
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _DstBlendAlpha: 10
     - _EndTransparency: 1
-    - _EnvironmentReflections: 1
+    - _EnvironmentReflections: 0
     - _Float0: 1
     - _Float1: -0.43
     - _Float2: 2.33
@@ -122,7 +124,7 @@ Material:
     - _Point3: 2
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.5
+    - _Smoothness: 0.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
@@ -145,10 +147,10 @@ Material:
     - __dirty: 0
     m_Colors:
     - _ASEOutlineColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 0.84313726}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.0047169924, g: 0.70808285, b: 1, a: 0.49019608}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0, g: 0.5877156, b: 1, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0.22687821, g: 0.21342114, b: 0.41509432, a: 1}
     - _FresnelColor: {r: 0, g: 0.25355005, b: 1, a: 1}
     - _MainColor: {r: 0.39383334, g: 0.7169812, b: 0.34158066, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
