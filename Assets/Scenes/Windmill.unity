@@ -323,6 +323,7 @@ MonoBehaviour:
   handCircleCounter: {fileID: 12523652}
   objectToMove: {fileID: 2010106279}
   divisionFactor: 40
+  smoothTime: 0.2
 --- !u!1 &14374124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2,
@@ -860,7 +861,7 @@ Transform:
   m_GameObject: {fileID: 261710789}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -1.8, z: 6.09}
+  m_LocalPosition: {x: 0.7, y: -1.8, z: 6.5}
   m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
