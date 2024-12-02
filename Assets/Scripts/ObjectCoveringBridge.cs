@@ -35,6 +35,10 @@ public class ObjectCoveringBridge : MonoBehaviour
     public float totalCount = 20f; 
     public float currentCount = 0f;
 
+    [Header("External GameObject")]
+    [SerializeField]
+    private WarningBoundary warningSign;
+
     private float lastZRotation = 0f; 
 
     private void Start()
@@ -133,7 +137,7 @@ public class ObjectCoveringBridge : MonoBehaviour
                 return;
             }
 
-            if (isPlayerInside)
+            if (isPlayerInside || warningSign.isPlayerOutside)
             {
                 totalCount++;
             }

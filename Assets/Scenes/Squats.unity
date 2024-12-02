@@ -1697,7 +1697,7 @@ MonoBehaviour:
   currentCountText: {fileID: 2009896117}
   totalCount: 20
   currentCount: 0
-  warningBoundary: {fileID: 7882499370248435146}
+  warningSign: {fileID: 7882499370248435146}
 --- !u!114 &378201579
 MonoBehaviour:
   m_ObjectHideFlags: 0

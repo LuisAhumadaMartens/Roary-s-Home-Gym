@@ -906,7 +906,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -926,11 +932,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: ec1063ba-970d-4502-9e7b-77f684f18b9e
+  cloudProjectId: dfa19d1d-82cf-441f-b7a8-edd28f4592c2
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Roary's Home Gym
-  organizationId: camdenmontgomery
+  organizationId: luisahumada
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

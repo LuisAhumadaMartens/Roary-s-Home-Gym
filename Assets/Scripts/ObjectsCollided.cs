@@ -1,25 +1,21 @@
-
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectsCollided : MonoBehaviour
 {
     [SerializeField]
-    private GameObject objectToCollide; 
+    private GameObject objectToCollide;
 
     [SerializeField]
     private EnableDisableGameObject enableDisableScript; 
 
     [SerializeField]
-    private GameObject targetObjectToFadeIn; 
+    private GameObject targetObjectToFadeIn;
 
     [SerializeField]
-    private GameObject fadeOutObject1; 
-    
-    [SerializeField]
-    private GameObject fadeOutObject2; 
+    private List<GameObject> fadeOutObjects;
 
-    private bool hasTriggeredAction = false; 
+    private bool hasTriggeredAction = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,7 +29,7 @@ public class ObjectsCollided : MonoBehaviour
 
             hasTriggeredAction = true;
 
-            Destroy(this); 
+            Destroy(this);
         }
     }
 
@@ -43,11 +39,13 @@ public class ObjectsCollided : MonoBehaviour
         {
             enableDisableScript.EnableObject(targetObjectToFadeIn);
 
-            if (fadeOutObject1 != null)
-                enableDisableScript.DisableObject(fadeOutObject1);
-
-            if (fadeOutObject2 != null)
-                enableDisableScript.DisableObject(fadeOutObject2);
+            foreach (GameObject fadeOutObject in fadeOutObjects)
+            {
+                if (fadeOutObject != null)
+                {
+                    enableDisableScript.DisableObject(fadeOutObject);
+                }
+            }
         }
     }
 }
