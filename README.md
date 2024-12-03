@@ -5,7 +5,7 @@ AR/VR Sports
 - [Introduction](#introduction)  
 - [Why a VR game?](#why-a-vr-game)  
 - [Our structure](#our-structure)  
-- [Requirements](#requirement)  
+- [Requirements](#requirements)  
 - [Implementation](#implementation)  
 - [Installation](#installation)  
 - [Summary](#summary)  
