@@ -1,5 +1,7 @@
 # Roary's Home Gym  
-AR/VR Sports  
+AR/VR Sports 
+
+![Roary's Home Gym logo](ReadMeAssets/logo.svg)
 
 ## Table of Contents  
 - [Introduction](#introduction)  
@@ -13,7 +15,7 @@ AR/VR Sports
 ---
 
 ## Introduction  
-**Roary's Home Gym** is a virtual reality-based fitness platform that provides an immersive and engaging home workout experience. Featuring our school mascot, Roary, as a personal trainer, the system combines VR technology and gamification to address common challenges in home fitness.  
+**Roary's Home Gym** is a virtual reality-based fitness platform that provides an immersive and engaging home workout experience. Featuring our school mascot, Roary, as a personal trainer, the system combines VR technology and gamification to address common challenges in home fitness. 
 
 ---
 
