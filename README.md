@@ -3,12 +3,10 @@ AR/VR Sports
 
 ## Table of Contents  
 - [Introduction](#introduction)  
-- [Problem Statement](#problem-statement)  
-- [System Design](#system-design)  
-- [Current System](#current-system)  
-- [Requirements](#requirements)  
+- [Why a VR game?](#why-a-vr-game)  
+- [Our structure](#our-structure)  
+- [Requirements](#requirement)  
 - [Implementation](#implementation)  
-- [Object Design](#object-design)  
 - [Installation](#installation)  
 - [Summary](#summary)  
 
@@ -141,7 +139,6 @@ Roary's Home Gym is built using **Unity** and includes:
 
 5. **Launch the App**:  
    - Put on your headset, navigate to the **Unknown Sources** section, and select **Roary's Home Gym** to start.  
-****
 
 ---
 
