@@ -9,17 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 394e1ec200ba24e3c9c04cdeff5e6e1e
   - enabled: 1
+    path: Assets/Scenes/PushUps.unity
+    guid: 8a996fec722654f37b3ed6a8a1bf3d68
+  - enabled: 1
     path: Assets/Scenes/Squats.unity
     guid: 7cd2c24f06b9547fe93f786188e1acaf
-  - enabled: 1
-    path: Assets/Scenes/Windmill.unity
-    guid: eae44e0390524de47a857e90e746dd0d
   - enabled: 1
     path: Assets/Scenes/CalfRaises.unity
     guid: e51ec3cf97d7c47f7bc17cd3b3bb8d60
   - enabled: 1
-    path: Assets/Scenes/PushUps.unity
-    guid: 8a996fec722654f37b3ed6a8a1bf3d68
+    path: Assets/Scenes/Windmill.unity
+    guid: eae44e0390524de47a857e90e746dd0d
   - enabled: 1
     path: Assets/Scenes/SideBends.unity
     guid: 9ad5e8435f56541f99eaa6ee24c2ecef
