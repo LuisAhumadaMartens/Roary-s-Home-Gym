@@ -3337,6 +3337,7 @@ GameObject:
   - component: {fileID: 1023145650}
   - component: {fileID: 1023145649}
   - component: {fileID: 1023145648}
+  - component: {fileID: 1023145652}
   m_Layer: 5
   m_Name: End UI
   m_TagString: Untagged
@@ -3430,6 +3431,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 1393, y: 724}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1023145652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023145647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1103835403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4436,6 +4456,7 @@ GameObject:
   - component: {fileID: 1556283182}
   - component: {fileID: 1556283181}
   - component: {fileID: 1556283180}
+  - component: {fileID: 1556283184}
   m_Layer: 5
   m_Name: Start UI
   m_TagString: Untagged
@@ -4528,6 +4549,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 1393, y: 724}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1556283184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556283179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &1585279270
 GameObject:
   m_ObjectHideFlags: 0
