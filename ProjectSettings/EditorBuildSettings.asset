@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PushUps.unity
     guid: 8a996fec722654f37b3ed6a8a1bf3d68
   - enabled: 1
-    path: Assets/Scenes/Others/ElbowRaises.unity
-    guid: 3aa54f3a42e584c98876ebc138ae9d6e
-  - enabled: 1
     path: Assets/Scenes/SideBends.unity
     guid: 9ad5e8435f56541f99eaa6ee24c2ecef
   m_configObjects:
