@@ -5,7 +5,7 @@ public class BridgeHeight : MonoBehaviour
 {
     [SerializeField] private GameObject bridge;
     [SerializeField] private GameObject bridgeOffset; 
-    [SerializeField] private float percentage = 0.3f;
+    [SerializeField] private float percentage = 0.85f;
     [SerializeField] private float playerOffset = 12.5f;
     [SerializeField] private float offset = 1.1f;
 

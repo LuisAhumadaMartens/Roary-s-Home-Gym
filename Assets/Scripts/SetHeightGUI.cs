@@ -1,7 +1,10 @@
 using UnityEngine;
+using TMPro;
 
-public class SetHeight : MonoBehaviour
+public class SetHeightGUI : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI heightText; 
+    [SerializeField] private TextMeshProUGUI savedHeightText;
     private Transform vrCameraTransform;
     private float currentHeight;
 
@@ -13,19 +16,21 @@ public class SetHeight : MonoBehaviour
 
         if (PlayerPrefs.HasKey(PlayerHeightKey))
         {
-            currentHeight = PlayerPrefs.GetFloat(PlayerHeightKey);
+            float savedHeight = PlayerPrefs.GetFloat(PlayerHeightKey);
+            savedHeightText.text = $"{savedHeight:F2} m";
         }
         else
         {
-            currentHeight = 1.75f; 
+            savedHeightText.text = "#.## m";
         }
     }
 
     void Update()
     {
-        if (vrCameraTransform != null)
+        if (vrCameraTransform != null && heightText != null)
         {
             currentHeight = vrCameraTransform.position.y;
+            heightText.text = $"{currentHeight:F2} m";
         }
     }
 
@@ -35,6 +40,11 @@ public class SetHeight : MonoBehaviour
         {
             PlayerPrefs.SetFloat(PlayerHeightKey, currentHeight);
             PlayerPrefs.Save();
+
+            if (savedHeightText != null)
+            {
+                savedHeightText.text = $"{currentHeight:F2} m";
+            }
         }
     }
 }

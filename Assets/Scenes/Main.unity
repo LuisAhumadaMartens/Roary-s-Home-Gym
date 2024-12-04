@@ -429,6 +429,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5341962971266370769}
+        m_TargetAssemblyTypeName: SetHeight, Assembly-CSharp
+        m_MethodName: SaveHeight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
@@ -1058,6 +1070,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5341962971266370769}
+        m_TargetAssemblyTypeName: SetHeight, Assembly-CSharp
+        m_MethodName: SaveHeight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
@@ -1542,6 +1566,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5341962971266370769}
+        m_TargetAssemblyTypeName: SetHeight, Assembly-CSharp
+        m_MethodName: SaveHeight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
@@ -2174,8 +2210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81283e75cba7a40df90c9649c59efe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heightText: {fileID: 1058752696}
-  savedHeightText: {fileID: 1318069232}
 --- !u!114 &333961099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4571,6 +4605,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5341962971266370769}
+        m_TargetAssemblyTypeName: SetHeight, Assembly-CSharp
+        m_MethodName: SaveHeight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
@@ -8188,6 +8234,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 5341962971266370769}
+        m_TargetAssemblyTypeName: SetHeight, Assembly-CSharp
+        m_MethodName: SaveHeight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 729926424}
         m_TargetAssemblyTypeName: SceneChoose, Assembly-CSharp
         m_MethodName: ChangeScene
@@ -14083,8 +14141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81283e75cba7a40df90c9649c59efe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heightText: {fileID: 1846077667}
-  savedHeightText: {fileID: 1735957879}
 --- !u!114 &2146255614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14473,6 +14529,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5341962971266370768}
+    - targetCorrespondingSourceObject: {fileID: 6836248654668303128, guid: 3c0ddeb7383b447abb22eef584fe7201,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5341962971266370769}
   m_SourcePrefab: {fileID: 100100000, guid: 3c0ddeb7383b447abb22eef584fe7201, type: 3}
 --- !u!1 &5341962971266370767 stripped
 GameObject:
@@ -14493,6 +14553,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 0.25
+--- !u!114 &5341962971266370769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5341962971266370767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81283e75cba7a40df90c9649c59efe7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7025746275561344793
 GameObject:
   m_ObjectHideFlags: 0
@@ -14678,6 +14750,7 @@ SceneRoots:
   - {fileID: 3622137167250548066}
   - {fileID: 5341962971266370766}
   - {fileID: 970003245}
+  - {fileID: 672499245}
   - {fileID: 1882330303}
   - {fileID: 461717115}
   - {fileID: 765515782}
@@ -14685,7 +14758,6 @@ SceneRoots:
   - {fileID: 1731775251}
   - {fileID: 1004253848}
   - {fileID: 437947038}
-  - {fileID: 672499245}
   - {fileID: 602439494}
   - {fileID: 1964389920}
   - {fileID: 929257956}
