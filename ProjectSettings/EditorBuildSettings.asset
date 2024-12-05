@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 394e1ec200ba24e3c9c04cdeff5e6e1e
   - enabled: 1
-    path: Assets/Scenes/PushUps.unity
+    path: Assets/Scenes/Others/PushUps.unity
     guid: 8a996fec722654f37b3ed6a8a1bf3d68
   - enabled: 1
     path: Assets/Scenes/Squats.unity
