@@ -6,169 +6,107 @@ public class SideBendEvent : MonoBehaviour
 {
     [Header("Serialized Fields")]
     [SerializeField] private SideBendTracker sideBendTracker; // Reference to the SideBendTracker script
-    [SerializeField] private GameObject textPrefab; // Prefab of the TextMeshPro object to instantiate
-    [SerializeField] private int numberOfTextItems = 5; // Number of TextMeshPro items to generate
+    [SerializeField] private TextMeshProUGUI instructionText; // Single TextMeshPro for instructions
     [SerializeField] private TextMeshProUGUI correctCountText; // TextMeshPro to display the correct count
     [SerializeField] private TextMeshProUGUI targetCountText; // TextMeshPro to display the target count
-    [SerializeField] private int targetCount = 10; // The number of correct repetitions needed
-    [SerializeField] private GameObject spawnParent; // GameObject where the TextMeshPro prefabs will be instantiated
+    [SerializeField] private int targetCount = 10; // Total reps needed to complete the set
+    [SerializeField] private EnableDisableGameObject enableDisableManager; // Reference to the enable/disable script
+    [SerializeField] private GameObject nextGameObject; // The GameObject to enable after completion
 
     [Header("Debug Info")]
-    [SerializeField] private int totalIncorrect = 0; // Total incorrect actions
-    [SerializeField] private TextMeshProUGUI currentSideText; // TextMeshPro for debugging (current side)
-    private List<GameObject> textMeshProObjects = new List<GameObject>();
-    private List<string> currentInstructions = new List<string>();
-    private SideBendTracker.SideBendState lastState = SideBendTracker.SideBendState.None;
-
     private int correctCount = 0; // Track correct repetitions
-    private int currentIndex = 0;
+    private SideBendTracker.SideBendState lastState = SideBendTracker.SideBendState.None;
+    private bool isWaitingForNone = false; // Ensure player returns to "None" before the next bend
 
     public void ActivateGame()
     {
-        // Clear any previous state
-        foreach (var textObj in textMeshProObjects)
-        {
-            Destroy(textObj); // Destroy all previous TextMeshPro objects
-        }
-        textMeshProObjects.Clear();
-
-        totalIncorrect = 0;
+        // Initialize the game
         correctCount = 0;
-        currentIndex = 0;
-
-        // Instantiate the TextMeshPro objects as children of the spawnParent
-        for (int i = 0; i < numberOfTextItems; i++)
-        {
-            GameObject newText = Instantiate(textPrefab, spawnParent.transform); // Instantiate and parent to spawnParent
-            textMeshProObjects.Add(newText); // Add the new object to the list
-        }
-
-        // Generate initial instruction buffer
-        GenerateInstructions();
         UpdateUI();
+
+        // Generate the first instruction
+        GenerateNewInstruction();
     }
 
     void Update()
     {
-        if (sideBendTracker == null) return;
+        if (sideBendTracker == null || instructionText == null) return;
 
-        // Get the current bend state
+        // Detect the current bend state
         SideBendTracker.SideBendState currentState = sideBendTracker.DetectSideBend();
 
-        // Display the current side (for debugging)
-        if (currentSideText != null)
+        // Ensure the player has returned to "None" before the next side bend
+        if (isWaitingForNone && currentState == SideBendTracker.SideBendState.None)
         {
-            currentSideText.text = $"Current Side: {currentState}"; // Show the current side detected (None, Left, or Right)
+            isWaitingForNone = false; // Reset waiting flag
         }
 
-        // Only proceed if the player is in "None" state before they can do left/right
-        if (currentState == SideBendTracker.SideBendState.None)
+        // Only proceed if the player is not in the "None" state
+        if (currentState != SideBendTracker.SideBendState.None && !isWaitingForNone)
         {
-            return;
-        }
-
-        // Get the expected side (left or right) from the current instruction
-        string expected = currentInstructions[currentIndex];
-
-        // Check if the current state matches the expected instruction
-        if ((expected == "Left" && currentState == SideBendTracker.SideBendState.Left) ||
-            (expected == "Right" && currentState == SideBendTracker.SideBendState.Right))
-        {
-            if (lastState == SideBendTracker.SideBendState.None)
+            // Check if the instruction matches the player's action
+            if (instructionText.text == "Left" && currentState == SideBendTracker.SideBendState.Left ||
+                instructionText.text == "Right" && currentState == SideBendTracker.SideBendState.Right)
             {
-                // Correct move, update the index
-                correctCount++;
-
-                // Destroy the top-most TextMeshPro object (index 0)
-                Destroy(textMeshProObjects[0]);
-
-                // Instantiate a new random instruction and add it to the top of the list
-                string newInstruction = Random.Range(0, 2) == 0 ? "Left" : "Right";
-                GameObject newText = Instantiate(textPrefab, spawnParent.transform);
-                textMeshProObjects.Insert(0, newText); // Insert at the top of the list
-
-                // Update the text of the new top object
-                newText.GetComponent<TextMeshProUGUI>().text = newInstruction;
-                currentInstructions.Insert(0, newInstruction); // Insert the new instruction at the top
-
-                // Update the UI
-                UpdateUI();
-
-                // If the player has completed the required repetitions
-                if (correctCount >= targetCount)
+                if (lastState == SideBendTracker.SideBendState.None) // Only valid if starting from "None"
                 {
-                    Debug.Log("Goal achieved!");
+                    correctCount++;
+
+                    // Check if the player has completed the target
+                    if (correctCount >= targetCount)
+                    {
+                        HandleCompletion();
+                        return; // Stop further processing
+                    }
+
+                    // Generate a new instruction and update UI
+                    GenerateNewInstruction();
+                    UpdateUI();
+                    isWaitingForNone = true; // Wait for "None" before the next move
                 }
             }
-        }
-        else
-        {
-            // Incorrect move: increment the incorrect total
-            totalIncorrect++;
-            ShiftAndRegenerate();
-            UpdateUI();
+            else if (lastState == SideBendTracker.SideBendState.None) // Handle incorrect action only once per attempt
+            {
+                targetCount++;
+
+                // Update UI to reflect the updated target count
+                UpdateUI();
+                isWaitingForNone = true; // Wait for "None" before allowing further actions
+            }
         }
 
-        // Update last state for the next frame
+        // Update last state
         lastState = currentState;
     }
 
-    private void GenerateInstructions()
+    private void GenerateNewInstruction()
     {
-        // Clear the current instruction list
-        currentInstructions.Clear();
-
-        // Generate random "Left" or "Right" instructions for the specified number of items
-        for (int i = 0; i < numberOfTextItems; i++)
-        {
-            currentInstructions.Add(Random.Range(0, 2) == 0 ? "Left" : "Right");
-        }
-
-        // Update the UI for the new instructions
-        for (int i = 0; i < textMeshProObjects.Count; i++)
-        {
-            if (i < currentInstructions.Count)
-            {
-                textMeshProObjects[i].GetComponent<TextMeshProUGUI>().text = currentInstructions[i];
-            }
-            else
-            {
-                textMeshProObjects[i].GetComponent<TextMeshProUGUI>().text = "";
-            }
-        }
-    }
-
-    private void ShiftAndRegenerate()
-    {
-        // Shift the instructions list left (remove the first instruction) and add a new random instruction
-        currentInstructions.RemoveAt(0);
-        currentInstructions.Add(Random.Range(0, 2) == 0 ? "Left" : "Right");
-
-        // Regenerate the TextMeshPro objects to reflect the updated instructions
-        for (int i = 0; i < textMeshProObjects.Count; i++)
-        {
-            textMeshProObjects[i].GetComponent<TextMeshProUGUI>().text = currentInstructions[i];
-        }
+        // Randomly generate "Left" or "Right"
+        instructionText.text = Random.Range(0, 2) == 0 ? "Left" : "Right";
     }
 
     private void UpdateUI()
     {
-        // Update correct count display
+        // Update correct count in UI
         if (correctCountText != null)
         {
-            correctCountText.text = $"Correct: {correctCount}/{targetCount}";
+            correctCountText.text = $"Correct: {correctCount}";
         }
 
-        // Update target count display
+        // Update target count in UI
         if (targetCountText != null)
         {
             targetCountText.text = $"Target: {targetCount}";
         }
+    }
 
-        // Update total incorrect count display
-        if (currentSideText != null)
+    private void HandleCompletion()
+    {
+        // Use the EnableDisableGameObject script to enable the next object and disable this one
+        if (enableDisableManager != null && nextGameObject != null)
         {
-            currentSideText.text += $"\nIncorrect: {totalIncorrect}";
+            enableDisableManager.EnableObject(nextGameObject);
+            enableDisableManager.DisableObject(gameObject);
         }
     }
 }
