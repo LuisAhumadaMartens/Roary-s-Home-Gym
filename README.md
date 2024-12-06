@@ -60,7 +60,7 @@ Roary's Home Gym is built using **Unity** and includes:
 ### Option 1: Using the Pre-Built APK  
 
 #### 1. **Download the APK**  
-   - Go to the [Releases](/Releases) section of this repository.  
+   - Go to the [Releases](https://github.com/LuisAhumadaMartens/Roary-s-Home-Gym/releases/tag/FIU-Capstone) section of this repository.  
    - Locate the latest version of the APK compatible with Meta Quest 3.  
    - Download the APK file to your computer.  
 
