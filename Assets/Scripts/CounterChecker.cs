@@ -17,6 +17,8 @@ public class CounterChecker : MonoBehaviour
     [SerializeField]
     private GameObject fadeOutObject2; 
 
+    [SerializeField] private Animator roary;
+
     private void Update()
     {
         if (objectCoveringScript != null && enableDisableScript != null && targetObjectToFadeIn != null)
@@ -24,7 +26,8 @@ public class CounterChecker : MonoBehaviour
             if (objectCoveringScript.currentCount >= objectCoveringScript.totalCount)
             {
                 enableDisableScript.EnableObject(targetObjectToFadeIn);
-
+                roary.SetBool("roarySquat", false); 
+                
                 if (fadeOutObject1 != null)
                     enableDisableScript.DisableObject(fadeOutObject1);
                 
