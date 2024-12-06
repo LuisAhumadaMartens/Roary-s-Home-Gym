@@ -78,12 +78,12 @@ public class SideBendEvent : MonoBehaviour
     {
         if (correctCountText != null)
         {
-            correctCountText.text = $"{correctCount}";
+            correctCountText.text = $"Correct: {correctCount}";
         }
 
         if (targetCountText != null)
         {
-            targetCountText.text = $"{targetCount}";
+            targetCountText.text = $"Target: {targetCount}";
         }
     }
 

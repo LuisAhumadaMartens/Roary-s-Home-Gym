@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class BridgeSwing : MonoBehaviour
@@ -11,8 +12,6 @@ public class BridgeSwing : MonoBehaviour
     //[Header("Control Settings")]
     //[SerializeField]
     private bool isMoving = false; // If the Scene starts with this in a false, ONLY change it with the function SetMovement(true);
-
-    [SerializeField] private Animator roary;
 
     private float currentAngle;
     private float elapsedTime;
@@ -55,8 +54,6 @@ public class BridgeSwing : MonoBehaviour
     public void SetMovement(bool move)
     {
         isMoving = move;
-
-        roary.SetBool("roarySquat", move);
 
         if (move)
         {

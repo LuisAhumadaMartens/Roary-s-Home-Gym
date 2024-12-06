@@ -601,9 +601,8 @@ MonoBehaviour:
   buttonInfinite: {fileID: 1290236844}
   titleGameObject: {fileID: 948025205}
   descriptionGameObject: {fileID: 1905730736}
-  title: 'Execise: Windmills'
-  description: 'Relive high school by revisiting the common gym room. Perform windmill
-    stretches to travel along the balance beam. '
+  title: 'Execrise: hl'
+  description: sdfgdsg
 --- !u!1 &86548480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,9 +1917,8 @@ MonoBehaviour:
   buttonInfinite: {fileID: 1517834896}
   titleGameObject: {fileID: 948025205}
   descriptionGameObject: {fileID: 1905730736}
-  title: 'Exercise: Squats'
-  description: Enjoy a white Christmas in a snow covered forest. Perform proper squats
-    under a swinging bridge to avoid being knocked into the chilling water below.
+  title: 'Execrise: hl'
+  description: sdfgdsg
 --- !u!1 &248029735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,37 +2090,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &288491730
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 288491731}
-  m_Layer: 0
-  m_Name: squats
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &288491731
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288491730}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &333961095
 GameObject:
   m_ObjectHideFlags: 0
@@ -4458,10 +4425,8 @@ MonoBehaviour:
   buttonInfinite: {fileID: 1553337320}
   titleGameObject: {fileID: 948025205}
   descriptionGameObject: {fileID: 1905730736}
-  title: 'Execise: Side Bends'
-  description: 'Take to the skies and enjoy the view of cushy clouds and blue skies.
-    Perform appropriate side bends to control the altitude of your personal hot air
-    balloon. '
+  title: 'Execrise: hl'
+  description: sdfgdsg
 --- !u!1 &649356685
 GameObject:
   m_ObjectHideFlags: 0
@@ -5719,7 +5684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 264062a5e4c1f4391ac15e163acc43a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4de78c62fc93f449fb4a0b88e15f569f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6824,14 +6789,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.101960786, g: 0.101960786, b: 0.101960786, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e6b4cbddc353c4167bcd2706e019683a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4de78c62fc93f449fb4a0b88e15f569f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7058,7 +7023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 15d25dc0484b64d95b293de8622cbcd2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4de78c62fc93f449fb4a0b88e15f569f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7815,14 +7780,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_Color: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd3b54342ef3e480898fb4ad906d8217, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4de78c62fc93f449fb4a0b88e15f569f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8408,9 +8373,8 @@ MonoBehaviour:
   buttonInfinite: {fileID: 795636022}
   titleGameObject: {fileID: 948025205}
   descriptionGameObject: {fileID: 1905730736}
-  title: 'Execise: Calf Raises'
-  description: Sink under the sea to enjoy views of colorful coral reefs. Perform
-    proper calf raises to replenish your oxygen and prolong your viewing experience.
+  title: 'Execrise: hl'
+  description: sdfgdsg
 --- !u!1 &1132075092
 GameObject:
   m_ObjectHideFlags: 0
@@ -8845,37 +8809,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153831208}
   m_CullTransparentMesh: 1
---- !u!1 &1168310965
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1168310966}
-  m_Layer: 0
-  m_Name: Main
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1168310966
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1168310965}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175177387
 GameObject:
   m_ObjectHideFlags: 0
@@ -12016,37 +11949,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627968833}
   m_CullTransparentMesh: 0
---- !u!1 &1641137493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1641137494}
-  m_Layer: 0
-  m_Name: Calf Raises
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1641137494
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641137493}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1655684076
 GameObject:
   m_ObjectHideFlags: 0
@@ -14249,7 +14151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.75}
+  m_AnchoredPosition: {x: 0, y: -65.10001}
   m_SizeDelta: {x: 314, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905730736
@@ -14272,7 +14174,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Please select a scene from our collection of unique scenarios.
+  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 67f097aba6c9d467285e5c07102a490a, type: 2}
   m_sharedMaterial: {fileID: 6818521373432014176, guid: 67f097aba6c9d467285e5c07102a490a,
@@ -14308,7 +14211,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -18923,6 +18826,3 @@ SceneRoots:
   - {fileID: 1823521824}
   - {fileID: 1837302864}
   - {fileID: 3684355884525735095}
-  - {fileID: 1168310966}
-  - {fileID: 288491731}
-  - {fileID: 1641137494}
